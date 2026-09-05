@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Force HTTPS redirect -->
+  <script>
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+      location.replace('https://' + location.hostname + location.pathname + location.search + location.hash);
+    }
+  </script>
+  
+  <meta name="description" content="Förvandla din lärupplevelse med AI-driven läxhantering, omedelbar hjälp och smarta studieverktyg. Perfekt för elever och familjer.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://familylearn.ai/sv/">
+  <meta property="og:title" content="FamilyLearn.AI - Din personliga AI-lärkompanjon">
+  <meta property="og:description" content="Förvandla din lärupplevelse med AI-driven läxhantering, omedelbar hjälp och smarta studieverktyg. Perfekt för elever och familjer.">
+  <meta property="og:image" content="https://familylearn.ai/og-image-whatsapp.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="420">
+  <meta property="og:site_name" content="familylearn.ai">
+  <meta property="og:locale" content="sv_SE">
+                                                                
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://familylearn.ai/sv/">
+  <meta name="twitter:title" content="FamilyLearn.AI - Din personliga AI-lärkompanjon">
+  <meta name="twitter:description" content="Förvandla din lärupplevelse med AI-driven läxhantering, omedelbar hjälp och smarta studieverktyg. Perfekt för elever och familjer.">
+  <meta name="twitter:image" content="https://familylearn.ai/og-image-twitter.jpg">
+
+  <!-- Additional SEO -->
+  <meta name="keywords" content="AI learning, homework help, study assistant, education technology, AI tutor, student tools">
+  <meta name="author" content="familylearn.ai">
+  <link rel="canonical" href="https://familylearn.ai/sv/">
+
+  <!-- Cache control for version updates -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="familylearn.ai">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/Icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/icons/Icon-512.png">
+  <link rel="icon" type="image/png" href="/favicon.png"/>
+
+  <title>FamilyLearn.AI - Din personliga AI-lärkompanjon</title>
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#1b0036">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "FamilyLearn.AI",
+    "alternateName": "FamilyLearn.AI - Personal AI Learning Companion",
+    "url": "https://familylearn.ai/",
+    "description": "Förvandla din lärupplevelse med AI-driven läxhantering, omedelbar hjälp och smarta studieverktyg. Perfekt för elever och familjer.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web, iOS, Android",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "1250",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "featureList": [
+      "AI-powered homework assistance",
+      "Real-time chat with AI tutor",
+      "Multi-subject support (Math, Science, Languages, History)",
+      "Voice input and image recognition",
+      "Progress tracking and learning analytics",
+      "Personalized learning paths",
+      "Multi-language support (English, Russian, German, Spanish, French)"
+    ],
+    "inLanguage": "sv",
+    "browserRequirements": "Requires JavaScript. Modern browser recommended.",
+    "softwareVersion": "2.0",
+    "author": {
+      "@type": "Organization",
+      "name": "FamilyLearn.AI",
+      "url": "https://familylearn.ai/"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="/css/landing.css?v=f9d77b6-1788588988">
+  <script>
+    (function(){var b=document.querySelector('base');if(b&&b.href==='/')b.href='/';})();
+  </script>
+
+  <link rel="alternate" hreflang="ar" href="https://familylearn.ai/ar/">
+  <link rel="alternate" hreflang="ca" href="https://familylearn.ai/ca/">
+  <link rel="alternate" hreflang="cs" href="https://familylearn.ai/cs/">
+  <link rel="alternate" hreflang="da" href="https://familylearn.ai/da/">
+  <link rel="alternate" hreflang="de" href="https://familylearn.ai/de/">
+  <link rel="alternate" hreflang="el" href="https://familylearn.ai/el/">
+  <link rel="alternate" hreflang="en" href="https://familylearn.ai/">
+  <link rel="alternate" hreflang="es" href="https://familylearn.ai/es/">
+  <link rel="alternate" hreflang="es-419" href="https://familylearn.ai/es-419/">
+  <link rel="alternate" hreflang="fi" href="https://familylearn.ai/fi/">
+  <link rel="alternate" hreflang="fr" href="https://familylearn.ai/fr/">
+  <link rel="alternate" hreflang="he" href="https://familylearn.ai/he/">
+  <link rel="alternate" hreflang="hi" href="https://familylearn.ai/hi/">
+  <link rel="alternate" hreflang="hr" href="https://familylearn.ai/hr/">
+  <link rel="alternate" hreflang="hu" href="https://familylearn.ai/hu/">
+  <link rel="alternate" hreflang="id" href="https://familylearn.ai/id/">
+  <link rel="alternate" hreflang="it" href="https://familylearn.ai/it/">
+  <link rel="alternate" hreflang="ja" href="https://familylearn.ai/ja/">
+  <link rel="alternate" hreflang="ko" href="https://familylearn.ai/ko/">
+  <link rel="alternate" hreflang="ms" href="https://familylearn.ai/ms/">
+  <link rel="alternate" hreflang="nl" href="https://familylearn.ai/nl/">
+  <link rel="alternate" hreflang="no" href="https://familylearn.ai/no/">
+  <link rel="alternate" hreflang="pl" href="https://familylearn.ai/pl/">
+  <link rel="alternate" hreflang="pt-BR" href="https://familylearn.ai/pt-BR/">
+  <link rel="alternate" hreflang="ro" href="https://familylearn.ai/ro/">
+  <link rel="alternate" hreflang="ru" href="https://familylearn.ai/ru/">
+  <link rel="alternate" hreflang="sk" href="https://familylearn.ai/sk/">
+  <link rel="alternate" hreflang="sv" href="https://familylearn.ai/sv/">
+  <link rel="alternate" hreflang="th" href="https://familylearn.ai/th/">
+  <link rel="alternate" hreflang="tr" href="https://familylearn.ai/tr/">
+  <link rel="alternate" hreflang="uk" href="https://familylearn.ai/uk/">
+  <link rel="alternate" hreflang="vi" href="https://familylearn.ai/vi/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://familylearn.ai/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://familylearn.ai/zh-Hant/">
+</head>
+<body>
+
+  <!-- App Loader (Shown initially while checking auth or booting Flutter) -->
+  <div id="app-loader">
+    <div class="loader-card">
+      <div class="loader"></div>
+      <div id="loading-text" class="loading-text" data-i18n="loading_text">Loading FamilyLearn.AI...</div>
+    </div>
+  </div>
+
+  <!-- SEO-Optimized Landing Page -->
+  <div id="landing-page">
+    <div class="decor-layer" aria-hidden="true" style="height: 100vh; position: absolute; inset: 0;">
+      <div class="planet one">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+          <circle cx="50" cy="50" r="45" fill="#ffc800" opacity="0.2"/>
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#ffc800" stroke-width="4" opacity="0.6"/>
+          <text x="50" y="65" font-family="Arial,sans-serif" font-weight="bold" font-size="48" fill="#ffc800" text-anchor="middle">&#931;</text>
+        </svg>
+      </div>
+      <div class="planet two">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+          <circle cx="50" cy="50" r="45" fill="#1cb0f6" opacity="0.2"/>
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#1cb0f6" stroke-width="4" opacity="0.6"/>
+          <circle cx="50" cy="50" r="10" fill="#ff6b6b"/>
+          <ellipse cx="50" cy="50" rx="30" ry="10" fill="none" stroke="#1cb0f6" stroke-width="3" transform="rotate(45 50 50)"/>
+          <ellipse cx="50" cy="50" rx="30" ry="10" fill="none" stroke="#58cc02" stroke-width="3" transform="rotate(-45 50 50)"/>
+        </svg>
+      </div>
+      <div class="planet three">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+          <circle cx="50" cy="50" r="45" fill="#8b5fd6" opacity="0.2"/>
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#8b5fd6" stroke-width="4" opacity="0.6"/>
+          <path d="M 32 35 C 32 35, 40 30, 50 35 L 50 70 C 40 65, 32 70, 32 70 Z" fill="#8b5fd6"/>
+          <path d="M 68 35 C 68 35, 60 30, 50 35 L 50 70 C 60 65, 68 70, 68 70 Z" fill="#6f44b6"/>
+        </svg>
+      </div>
+      <div class="planet four">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+          <circle cx="50" cy="50" r="45" fill="#f39c12" opacity="0.15"/>
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#f39c12" stroke-width="4" opacity="0.4"/>
+          <polygon points="50,25 25,70 75,70" fill="none" stroke="#f39c12" stroke-width="6" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="planet five">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+          <circle cx="50" cy="50" r="45" fill="#e74c3c" opacity="0.1"/>
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#e74c3c" stroke-width="4" opacity="0.4"/>
+          <polygon points="50,20 60,40 80,45 65,60 70,80 50,70 30,80 35,60 20,45 40,40" fill="#e74c3c" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="planet six">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+          <circle cx="50" cy="50" r="45" fill="#58cc02" opacity="0.15"/>
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#58cc02" stroke-width="4" opacity="0.4"/>
+          <circle cx="50" cy="50" r="15" fill="#58cc02" opacity="0.7"/>
+          <circle cx="50" cy="50" r="8" fill="#fff"/>
+        </svg>
+      </div>
+    </div>
+    <header>
+      <div class="logo">
+        <div class="logo-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 130 130" width="48" height="48">
+            <defs>
+              <radialGradient id="logoCoreGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffd93d"/>
+                <stop offset="100%" stop-color="#ff6b6b"/>
+              </radialGradient>
+            </defs>
+            <circle cx="50" cy="50" r="40" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="4 4" opacity="0.65"/>
+            <circle cx="50" cy="50" r="24" fill="none" stroke="#ffc800" stroke-width="2" opacity="0.8"/>
+            <g transform="translate(10,50)">
+              <circle r="13" fill="var(--surface)" stroke="#ffc800" stroke-width="2.5"/>
+              <path d="M-5,6 L-5,-6 L5,-6 M-5,0 L3,0 M-5,6 L5,6" stroke="#ffc800" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            </g>
+            <g transform="translate(80,26)">
+              <circle r="11" fill="var(--surface)" stroke="#1cb0f6" stroke-width="2.5"/>
+              <circle r="3.5" fill="#ff6b6b"/>
+            </g>
+            <g transform="translate(68,86)">
+              <circle r="12" fill="var(--surface)" stroke="#58cc02" stroke-width="2.5"/>
+              <rect x="-4.5" y="-5" width="9" height="10" rx="1.5" fill="#58cc02"/>
+            </g>
+            <g transform="translate(50,8)">
+              <circle r="10" fill="var(--surface)" stroke="#8b5fd6" stroke-width="2.5"/>
+              <line x1="-3" y1="3" x2="3" y2="-3" stroke="#8b5fd6" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="3" y1="3" x2="-3" y2="-3" stroke="#8b5fd6" stroke-width="1.8" stroke-linecap="round"/>
+            </g>
+            <circle cx="50" cy="50" r="14" fill="url(#logoCoreGrad)"/>
+            <circle cx="50" cy="50" r="5" fill="var(--surface)"/>
+          </svg>
+        </div>
+        <div style="display: flex; align-items: baseline; line-height: 1;">
+          <span style="font-size: 1.45rem; font-weight: 800; color: var(--brand); letter-spacing: -0.5px;">FamilyLearn</span><span style="font-size: 1.45rem; font-weight: 800; color: var(--brand); opacity: 0.55; letter-spacing: -0.5px;">.AI</span>
+        </div>
+      </div>
+      <div class="nav-menu-backdrop" id="nav-menu-backdrop" aria-hidden="true"></div>
+      <nav>
+        <button type="button" id="nav-hamburger" class="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav-hamburger-bar"></span>
+          <span class="nav-hamburger-bar"></span>
+          <span class="nav-hamburger-bar"></span>
+        </button>
+        <div id="nav-menu" class="nav-menu" role="navigation">
+          <a href="#features" data-i18n="nav_features">Funktioner</a>
+          <a href="#parents" data-i18n="nav_parents">För föräldrar</a>
+          <a href="#use-cases" data-i18n="nav_use_cases">Användningsfall</a>
+          <a href="#faq" data-i18n="nav_faq">FAQ</a>
+          <div class="language-switcher language-switcher-header" aria-label="Language">
+            <button type="button" id="lang-globe-btn" class="lang-globe-btn" aria-haspopup="dialog" aria-label="Choose language">
+              <span id="lang-current-label" class="lang-current-label"></span>
+              <svg class="lang-globe-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </button>
+          </div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+            <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </div>
+        <dialog id="lang-dialog" class="lang-dialog" aria-labelledby="lang-dialog-title">
+          <div class="lang-dialog-content">
+            <h2 id="lang-dialog-title" class="lang-dialog-title">Language</h2>
+            <input type="search" id="lang-search" class="lang-search" placeholder="Search language..." aria-label="Search language">
+            <div id="lang-list" class="lang-list" role="listbox"></div>
+          </div>
+        </dialog>
+        <button class="cta-button nav-login-btn" onclick="window.startApp('nav_login')" data-i18n="nav_login">Logga in</button>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="hero">
+        <div>
+          <div class="hero-badges">
+            <span class="hero-badge" data-i18n="hero_badge_1">AI-lärare + Familjekontroll</span>
+            <span class="hero-badge" data-i18n="hero_badge_2">Föräldrar + Barn + AI</span>
+            <span class="hero-badge" data-i18n="hero_badge_3">Webb + iOS + Android</span>
+          </div>
+          <h1 data-i18n="hero_title">Din personliga AI-lärkompanjon</h1>
+          <p class="hero-subtitle" data-i18n="hero_subtitle">Förvandla din lärupplevelse med AI-driven läxhantering, omedelbar hjälp och smarta studieverktyg. Perfekt för elever och familjer.</p>
+          <button class="cta-button primary" onclick="window.startApp('hero_cta')" data-i18n="hero_cta">Börja lära dig gratis</button>
+          <div class="trust-stats">
+            <div class="trust-stat">
+              <span class="trust-stat-value" data-i18n="trust_stat_1_value">24/7</span>
+              <span class="trust-stat-label" data-i18n="trust_stat_1_label">AI-studiehjälp</span>
+            </div>
+            <div class="trust-stat">
+              <span class="trust-stat-value" data-i18n="trust_stat_2_value">Familj</span>
+              <span class="trust-stat-label" data-i18n="trust_stat_2_label">föräldrakontroller</span>
+            </div>
+            <div class="trust-stat">
+              <span class="trust-stat-value" data-i18n="trust_stat_3_value">Multi-chatt</span>
+              <span class="trust-stat-label" data-i18n="trust_stat_3_label">familj och AI tillsammans</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img
+            id="hero-img"
+            src="/assets/landing/hero_light_1200.webp"
+            data-light="/assets/landing/hero_light_1200.webp"
+            data-dark="/assets/landing/hero_dark_1200.webp"
+            alt="Parent, child, and AI learning companion"
+            class="hero-image"
+            width="1200"
+            height="670"
+            loading="eager"
+            onerror="this.src=this.src.replace('.webp','.jpg')"
+          >
+          <button class="hero-play-btn" id="hero-play-btn" aria-label="Watch Demo Video">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <h2 data-i18n="features_title">Varför välja FamilyLearn.AI?</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3 data-i18n="feat1_title">AI-läxhjälpare</h3>
+            <p data-i18n="feat1_desc">Få omedelbara svar och steg-för-steg-förklaringar för alla ämnen. Fastna aldrig mer i en uppgift.</p>
+          </div>
+          <div class="feature-card" id="parents">
+            <h3 data-i18n="feat2_title">Familjehantering</h3>
+            <p data-i18n="feat2_desc">Föräldrar kan övervaka framsteg, kontrollera användning och aktivt hjälpa till med studier i en uppkopplad familjemiljö.</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n="feat3_title">Familj Multi-chatt</h3>
+            <p data-i18n="feat3_desc">Föräldrar, barn och AI-lärare tillsammans i en sömlös, delad lärandechatt.</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n="feat4_title">Bild- och textigenkänning</h3>
+            <p data-i18n="feat4_desc">Lär dig på ditt sätt. Ta ett foto av din läxa eller skriv frågor för omedelbar AI-assistans.</p>
+          </div>
+        </div>
+        <div class="feature-image-row">
+          <img src="/assets/landing/sv/web_family_dashboard.png" alt="Family Dashboard" class="feature-image" loading="lazy">
+          <img src="/assets/landing/sv/web_ai_chat.png" alt="AI Chat Workspace" class="feature-image" loading="lazy">
+        </div>
+      </section>
+
+      <section class="mobile-apps">
+        <h2 data-i18n="apps_title">Lär dig var som helst, när som helst</h2>
+        <p data-i18n="apps_desc">Använd FamilyLearn.AI på webb, iOS och Android.</p>
+        <div class="mobile-apps-visual">
+          <img src="/assets/landing/sv/web_ratings.png" alt="App Store Ratings" class="feature-image" loading="lazy">
+        </div>
+        <div class="store-buttons">
+          <a href="https://apps.apple.com/us/app/learn-ai-ai-tutor/id6756234872" target="_blank" class="store-button" onclick="window.trackLandingEvent?.('app_store_click', { source: 'landing' })">
+            <svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+            App Store
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=pro.ainative.learn" target="_blank" class="store-button" onclick="window.trackLandingEvent?.('play_store_click', { source: 'landing' })">
+            <svg viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+            Google Play
+          </a>
+          <a href="#" class="store-button" onclick="window.trackLandingEvent?.('web_app_click', { source: 'landing' }); window.startApp('web_app'); return false;">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm6.92 9h-3.01a15.1 15.1 0 0 0-1.03-4 8.03 8.03 0 0 1 4.04 4zM12 4.04A13.14 13.14 0 0 1 13.95 11h-3.9A13.14 13.14 0 0 1 12 4.04zM9.12 7a15.1 15.1 0 0 0-1.03 4H5.08a8.03 8.03 0 0 1 4.04-4zM5.08 13h3.01a15.1 15.1 0 0 0 1.03 4 8.03 8.03 0 0 1-4.04-4zM12 19.96A13.14 13.14 0 0 1 10.05 13h3.9A13.14 13.14 0 0 1 12 19.96zM14.88 17a15.1 15.1 0 0 0 1.03-4h3.01a8.03 8.03 0 0 1-4.04 4z"/>
+            </svg>
+            Web App
+          </a>
+        </div>
+      </section>
+
+      <section id="use-cases" class="use-cases">
+        <h2 data-i18n="use_cases_title">Für Familien gemacht</h2>
+        <p class="use-cases-desc" data-i18n="use_cases_desc">Echte Funktionen aus der App. Eltern kontrollieren, Kinder lernen smarter.</p>
+        <div class="use-case-grid">
+          <div class="use-case-card">
+            <h3 data-i18n="use_case_1_title">Volle elterliche Kontrolle</h3>
+            <p data-i18n="use_case_1_desc">Sie kontrollieren, wie Kinder mit KI chatten und Hausaufgaben machen. Fortschritt überwachen, Chat-Verlauf einsehen und Lernen an einem Ort unterstützen.</p>
+          </div>
+          <div class="use-case-card">
+            <h3 data-i18n="use_case_2_title">KI prüft Hausaufgaben</h3>
+            <p data-i18n="use_case_2_desc">Kinder bekommen Tests und Podcasts. KI bewertet Hausaufgaben mit Feedback. Sie sparen Zeit—kein manuelles Prüfen mehr.</p>
+          </div>
+          <div class="use-case-card">
+            <h3 data-i18n="use_case_3_title">Prüfungsvorbereitung unterwegs</h3>
+            <p data-i18n="use_case_3_desc">Kinder bereiten sich auf Prüfungen vor. KI-Podcasts auf dem Weg zur Schule hören. Smarter lernen, überall.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="faq">
+        <h2 data-i18n="faq_title">Häufig gestellte Fragen</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary data-i18n="faq_q1">Wie kontrollieren Eltern den KI-Chat und die Hausaufgaben der Kinder?</summary>
+            <p data-i18n="faq_a1">Eltern sehen alle Hausaufgaben, Chat-Verlauf und Fortschritt im Familien-Dashboard. Sie können jedem Chat beitreten, Tests und Noten einsehen und Ihr Kind ohne ständige Überwachung unterstützen.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq_q2">Prüft die KI wirklich Hausaufgaben?</summary>
+            <p data-i18n="faq_a2">Ja. Nachdem Ihr Kind eine Lösung eingereicht hat, bewertet die KI sie und gibt Feedback. Kinder bekommen auch Übungstests. Sie sehen die Ergebnisse in der App—keine manuelle Prüfung nötig.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq_q3">Wie helfen Podcasts bei der Prüfungsvorbereitung?</summary>
+            <p data-i18n="faq_a3">Hausaufgaben und Prüfungsthemen werden zu Audio-Podcasts. Kinder können im Bus, auf dem Weg zur Schule oder zu Hause hören. Wie ein KI-Tutor in der Tasche.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="social-proof">
+        <h2 data-i18n="proof_title">Betrodd av familjer och elever</h2>
+        <p data-i18n="proof_desc">Gå med tusentals användare som förbättrar sina betyg och studvanor varje dag.</p>
+        <div class="testimonial-cards">
+          <div class="testimonial-card">
+            <strong data-i18n="testimonial_1_role">Förälder, elev i årskurs 6</strong>
+            <span data-i18n="testimonial_1_quote">&quot;Min dotter slutför nu läxorna utan stress. Jag kan följa framstegen varje dag.&quot;</span>
+          </div>
+          <div class="testimonial-card">
+            <strong data-i18n="testimonial_2_role">Gymnasieelev</strong>
+            <span data-i18n="testimonial_2_quote">&quot;Multi-chatt per ämne är det bästa. Jag håller matte och språk åtskilda.&quot;</span>
+          </div>
+          <div class="testimonial-card">
+            <strong data-i18n="testimonial_3_role">Förälder till två barn</strong>
+            <span data-i18n="testimonial_3_quote">&quot;Familjekontroller och lärhistorik hjälper oss att stödja båda barnen med en app.&quot;</span>
+          </div>
+        </div>
+        <br>
+        <button class="cta-button primary" onclick="window.startApp('proof_cta')" data-i18n="proof_cta">Kom igång nu</button>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-nav-links">
+          <a href="/ai-homework-helper/" data-i18n="footer_ai_homework_helper">AI-läxhjälp</a>
+          <a href="/parental-control-learning/" data-i18n="footer_parental_control">Föräldrakontroll</a>
+          <a href="/ai-checks-homework/" data-i18n="footer_ai_homework_checker">AI-läxgranskare</a>
+          <a href="/family-chat/" data-i18n="footer_family_ai_chat">Familj-AI-chatt</a>
+          <a href="/exam-prep-podcast/" data-i18n="footer_exam_prep_podcasts">Podcasts för provförberedelse</a>
+          <a href="/blog/" data-i18n="footer_blog">Blogg</a>
+          <a href="/glossary/" data-i18n="footer_glossary">Ordlista</a>
+          <a href="/qa/" data-i18n="footer_qa">F&amp;A</a>
+        </div>
+      </div>
+      <p data-i18n="footer_copyright">© 2026 FamilyLearn.AI. Alla rättigheter förbehållna.</p>
+    </footer>
+  </div>
+
+  <script src="/js/landing.js?v=f9d77b6-1788588988"></script>
+
+  <!-- Always reveal landing if Firebase/CDN is blocked or slow -->
+  <script>
+    window.authChecked = false;
+    setTimeout(function() {
+      window.revealLandingPage?.();
+    }, 3000);
+  </script>
+
+  <!-- Firebase SDK & Auth Check -->
+  <script type="module">
+    let initializeApp;
+    let getAnalytics;
+    let logEvent;
+    let getAuth;
+    let onAuthStateChanged;
+
+    try {
+      ({ initializeApp } = await import("https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"));
+      ({ getAnalytics, logEvent } = await import("https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js"));
+      ({ getAuth, onAuthStateChanged } = await import("https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js"));
+    } catch (error) {
+      console.warn('Firebase SDK unavailable:', error);
+      window.revealLandingPage?.();
+    }
+
+    if (!initializeApp) {
+      // Firebase blocked/unavailable — landing fallback already handled above.
+    } else {
+    const firebaseConfig = {
+      apiKey: "AIzaSyCZLq5X9rN2d0ZtHNAR4wcrjQAi2UIco7g",
+      authDomain: "ai-native-478811.firebaseapp.com",
+      projectId: "ai-native-478811",
+      storageBucket: "ai-native-478811.firebasestorage.app",
+      messagingSenderId: "80693608388",
+      appId: "1:80693608388:web:12a1176e79bc7025f26e91",
+      measurementId: "G-7S1Q0MERFG"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app);
+
+    window.firebaseApp = app;
+    window.firebaseAnalytics = analytics;
+
+    const trackLandingEvent = function(eventName, params) {
+      try {
+        logEvent(analytics, eventName, params || {});
+      } catch (e) {
+        console.warn('Analytics:', e);
+      }
+    };
+    window.trackLandingEvent = trackLandingEvent;
+
+    function getLandingLocale() {
+      return typeof window.getEffectiveLang === 'function' ? window.getEffectiveLang() : 'en';
+    }
+
+    function trackLandingPageView() {
+      trackLandingEvent('landing_page_view', { page_language: getLandingLocale(), page_location: window.location.pathname || '/' });
+    }
+
+    // Only check auth if we haven't already booted (e.g., from OAuth callback)
+    if (!window.flutterBooted) {
+      onAuthStateChanged(auth, (user) => {
+        if (window.flutterBooted) return;
+
+        if (user) {
+          window.authChecked = true;
+          // User is logged in -> boot Flutter seamlessly
+          window.startApp('firebase_auth');
+        } else if (!window.authChecked) {
+          window.revealLandingPage();
+        }
+      });
+    }
+    }
+  </script>
+</body>
+</html>

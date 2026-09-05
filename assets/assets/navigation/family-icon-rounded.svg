@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="title">
+  <title>Family icon - rounded</title>
+  <g fill="currentColor">
+    <!-- Parent 1 (left) - rounded -->
+    <circle cx="7" cy="9" r="2.8"/>
+    <path d="M3.5 18.5c0-1.5 1.1-2.7 2.5-2.7h2c1.4 0 2.5 1.2 2.5 2.7v1.5H3.5v-1.5z" rx="1"/>
+    <!-- Parent 2 (right) - rounded -->
+    <circle cx="17" cy="9" r="2.8"/>
+    <path d="M13.5 18.5c0-1.5 1.1-2.7 2.5-2.7h2c1.4 0 2.5 1.2 2.5 2.7v1.5h-7v-1.5z" rx="1"/>
+    <!-- Child (center) - rounded -->
+    <circle cx="12" cy="6" r="2"/>
+    <path d="M9.5 14.5c0-.8.6-1.5 1.5-1.5h1c.9 0 1.5.7 1.5 1.5v2.5h-4v-2.5z" rx="1"/>
+  </g>
+</svg>

@@ -1,0 +1,110 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Фон-круг для композиции -->
+  <circle cx="120" cy="120" r="110" fill="#F0F4F8" opacity="0.5"/>
+  
+  <!-- Солнце -->
+  <circle cx="180" cy="50" r="20" fill="#FFD93D" opacity="0.8"/>
+  <circle cx="180" cy="50" r="25" fill="#FFD93D" opacity="0.3"/>
+  
+  <!-- Пальма -->
+  <g id="palm-tree">
+    <!-- Ствол -->
+    <path d="M 60 180 Q 65 140 70 100 Q 72 80 75 60" 
+          stroke="#8B4513" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round"/>
+    
+    <!-- Листья пальмы -->
+    <g id="leaves" transform="translate(75, 60)">
+      <!-- Центральный лист -->
+      <path d="M 0 0 Q -15 -20 -25 -35" stroke="#228B22" stroke-width="3" fill="none"/>
+      <path d="M -25 -35 L -28 -33 L -27 -37 L -30 -36 L -25 -35" fill="#228B22"/>
+      
+      <!-- Правый лист 1 -->
+      <path d="M 0 0 Q 20 -15 35 -20" stroke="#228B22" stroke-width="3" fill="none"/>
+      <path d="M 35 -20 L 36 -17 L 38 -21 L 37 -23 L 35 -20" fill="#228B22"/>
+      
+      <!-- Правый лист 2 -->
+      <path d="M 0 0 Q 25 -5 40 -5" stroke="#228B22" stroke-width="3" fill="none"/>
+      <path d="M 40 -5 L 41 -2 L 43 -5 L 41 -8 L 40 -5" fill="#228B22"/>
+      
+      <!-- Левый лист 1 -->
+      <path d="M 0 0 Q -20 -10 -35 -15" stroke="#228B22" stroke-width="3" fill="none"/>
+      <path d="M -35 -15 L -37 -12 L -36 -17 L -38 -14 L -35 -15" fill="#228B22"/>
+      
+      <!-- Левый лист 2 -->
+      <path d="M 0 0 Q -25 0 -40 0" stroke="#228B22" stroke-width="3" fill="none"/>
+      <path d="M -40 0 L -42 3 L -41 -2 L -43 0 L -40 0" fill="#228B22"/>
+      
+      <!-- Нижний лист -->
+      <path d="M 0 0 Q 15 10 25 20" stroke="#228B22" stroke-width="3" fill="none"/>
+      <path d="M 25 20 L 27 22 L 26 18 L 23 19 L 25 20" fill="#228B22"/>
+    </g>
+  </g>
+  
+  <!-- Столбик для гамака справа -->
+  <line x1="160" y1="180" x2="160" y2="100" 
+        stroke="#8B4513" 
+        stroke-width="6" 
+        stroke-linecap="round"/>
+  
+  <!-- Веревки гамака -->
+  <line x1="70" y1="95" x2="110" y2="120" stroke="#D2691E" stroke-width="2"/>
+  <line x1="160" y1="100" x2="130" y2="120" stroke="#D2691E" stroke-width="2"/>
+  
+  <!-- Гамак -->
+  <path d="M 110 120 Q 120 130 130 120" 
+        stroke="#FF6B6B" 
+        stroke-width="3" 
+        fill="#FF6B6B" 
+        opacity="0.8"/>
+  <path d="M 108 122 Q 120 132 132 122" 
+        stroke="#D2691E" 
+        stroke-width="1" 
+        fill="none"/>
+  
+  <!-- Человек в гамаке -->
+  <g id="person">
+    <!-- Тело -->
+    <ellipse cx="120" cy="118" rx="12" ry="8" fill="#5C6BC0"/>
+    
+    <!-- Голова -->
+    <circle cx="120" cy="108" r="6" fill="#FDBCB4"/>
+    
+    <!-- Волосы -->
+    <path d="M 114 105 Q 120 102 126 105" 
+          stroke="#4A4A4A" 
+          stroke-width="2" 
+          fill="none" 
+          stroke-linecap="round"/>
+    
+    <!-- Рука с книгой -->
+    <line x1="125" y1="115" x2="130" y2="110" 
+          stroke="#FDBCB4" 
+          stroke-width="2" 
+          stroke-linecap="round"/>
+    
+    <!-- Книга -->
+    <rect x="128" y="106" width="8" height="6" fill="#4CAF50" rx="1"/>
+    <line x1="132" y1="107" x2="132" y2="111" stroke="#FFFFFF" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Облака -->
+  <g id="clouds" opacity="0.6">
+    <ellipse cx="40" cy="40" rx="15" ry="8" fill="#FFFFFF"/>
+    <ellipse cx="50" cy="38" rx="12" ry="8" fill="#FFFFFF"/>
+    
+    <ellipse cx="190" cy="80" rx="12" ry="6" fill="#FFFFFF"/>
+    <ellipse cx="198" cy="78" rx="10" ry="6" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Птицы -->
+  <g id="birds" opacity="0.7">
+    <path d="M 90 50 Q 95 48 100 50" stroke="#4A4A4A" stroke-width="1.5" fill="none"/>
+    <path d="M 100 60 Q 105 58 110 60" stroke="#4A4A4A" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- Тень под гамаком -->
+  <ellipse cx="120" cy="185" rx="40" ry="8" fill="#000000" opacity="0.1"/>
+</svg>

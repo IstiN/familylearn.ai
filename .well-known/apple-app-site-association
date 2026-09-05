@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "YP9HC3USZ3.cloud.ainative.learnai",
+        "paths": ["/auth/callback*"]
+      },
+      {
+        "appID": "YP9HC3USZ3.pro.ainative.learn",
+        "paths": ["/auth/callback*"]
+      }
+    ]
+  }
+}
+

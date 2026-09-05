@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="__HTML_LANG__">
+<head>
+  <base href="__BASE_HREF__">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="__META_DESCRIPTION__">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="__CANONICAL_URL__">
+  <meta property="og:title" content="__OG_TITLE__">
+  <meta property="og:description" content="__OG_DESCRIPTION__">
+  <meta property="og:image" content="__OG_IMAGE__">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:site_name" content="__SITE_NAME__">
+  <meta property="og:locale" content="__OG_LOCALE__">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="__CANONICAL_URL__">
+  <meta name="twitter:title" content="__OG_TITLE__">
+  <meta name="twitter:description" content="__OG_DESCRIPTION__">
+  <meta name="twitter:image" content="__TWITTER_IMAGE__">
+
+  <link rel="canonical" href="__CANONICAL_URL__">
+  <title>__PAGE_TITLE__</title>
+
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <link rel="stylesheet" href="/css/landing.css?v=source-version">
+  <script type="application/ld+json">
+__JSON_LD__
+  </script>
+  <style>
+    :root { color-scheme: dark light; --bg: #0f0a14; --fg: #f3f0fa; --muted: #a89fc0; --accent: #8b5fd6; --card: #1a1224; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--fg); line-height: 1.5; }
+    main { max-width: 42rem; margin: 0 auto; padding: 1.5rem; }
+    header.site { padding: 1rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    header.site a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    h1 { font-size: 1.5rem; margin: 0 0 0.75rem; line-height: 1.2; }
+    .lead { color: var(--muted); margin: 0 0 1.25rem; font-size: 0.95rem; }
+    .outline-heading { font-size: 1.05rem; margin: 1.25rem 0 0.5rem; font-weight: 600; color: var(--fg); }
+    .topics { padding: 0 0 0 1.25rem; margin: 0; }
+    .topics li { padding: 0.65rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .topics li:last-child { border-bottom: none; }
+    .topic-title { font-weight: 600; }
+    .topic-desc { font-size: 0.875rem; color: var(--muted); margin-top: 0.2rem; }
+    .cta-wrap { margin-top: 2rem; }
+    .cta { display: inline-block; background: #58cc02; color: #0f0a14; font-weight: 700; padding: 0.65rem 1.25rem; border-radius: 0.5rem; text-decoration: none; }
+    .cta:hover { filter: brightness(1.08); }
+    .seo-index { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); }
+    .seo-index h2 { font-size: 1rem; color: var(--muted); margin: 0 0 1rem; font-weight: 600; }
+    .seo-lesson { margin-bottom: 1.5rem; }
+    .seo-lesson h3 { font-size: 0.95rem; margin: 0 0 0.5rem; }
+    .seo-md { margin: 0; white-space: pre-wrap; font-family: ui-monospace, monospace; font-size: 0.75rem; line-height: 1.4; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div id="app-loader" style="display: none;">
+    <div class="loader-card">
+      <div class="loader"></div>
+      <div class="loading-text">Loading FamilyLearn.AI...</div>
+    </div>
+  </div>
+  <div id="landing-page" style="display: none;" aria-hidden="true"></div>
+
+  <div id="public-course-seo">
+    <header class="site"><a href="/">FamilyLearn.AI</a></header>
+    <main>
+      <article>
+        <h1>__H1__</h1>
+        <p class="lead">__LEAD__</p>
+        <h2 class="outline-heading">Course outline</h2>
+        <ol class="topics">
+__TOPIC_ROWS__
+        </ol>
+        <div class="cta-wrap">
+          <a class="cta" href="__APP_DEEP_LINK__" onclick="if (window.startApp) { window.startApp('public_course_cta'); } return false;">__CTA_LABEL__</a>
+          <p class="sr-app">__NOSCRIPT_HINT__</p>
+        </div>
+        <section class="seo-index">
+          <h2>Full lesson text (indexing)</h2>
+__FULL_TEXT_BLOCK__
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <script src="/js/landing.js?v=source-version"></script>
+</body>
+</html>
