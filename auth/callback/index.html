@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Authorization Successful - Learn.ai</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 400px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    .icon {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 16px;
+      opacity: 0.9;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .redirect-info {
+      font-size: 14px;
+      opacity: 0.7;
+      margin-top: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- English -->
+  <div class="container" data-lang="en">
+    <div class="icon">✅</div>
+    <h1>Authorization Successful</h1>
+    <p>You have been successfully authorized. The app should open automatically.</p>
+    <p class="redirect-info">If the app didn't open, please check that it's installed and try again.</p>
+  </div>
+  
+  <!-- Russian -->
+  <div class="container hidden" data-lang="ru">
+    <div class="icon">✅</div>
+    <h1>Авторизация успешна</h1>
+    <p>Вы успешно авторизованы. Приложение должно открыться автоматически.</p>
+    <p class="redirect-info">Если приложение не открылось, проверьте, что оно установлено, и попробуйте снова.</p>
+  </div>
+  
+  <!-- German -->
+  <div class="container hidden" data-lang="de">
+    <div class="icon">✅</div>
+    <h1>Autorisierung erfolgreich</h1>
+    <p>Sie wurden erfolgreich autorisiert. Die App sollte sich automatisch öffnen.</p>
+    <p class="redirect-info">Wenn sich die App nicht geöffnet hat, überprüfen Sie, ob sie installiert ist, und versuchen Sie es erneut.</p>
+  </div>
+  
+  <!-- Spanish -->
+  <div class="container hidden" data-lang="es">
+    <div class="icon">✅</div>
+    <h1>Autorización exitosa</h1>
+    <p>Has sido autorizado exitosamente. La aplicación debería abrirse automáticamente.</p>
+    <p class="redirect-info">Si la aplicación no se abrió, verifica que esté instalada e inténtalo de nuevo.</p>
+  </div>
+  
+  <!-- French -->
+  <div class="container hidden" data-lang="fr">
+    <div class="icon">✅</div>
+    <h1>Autorisation réussie</h1>
+    <p>Vous avez été autorisé avec succès. L'application devrait s'ouvrir automatiquement.</p>
+    <p class="redirect-info">Si l'application ne s'est pas ouverte, vérifiez qu'elle est installée et réessayez.</p>
+  </div>
+  
+  <script>
+    // Language detection and selection
+    (function() {
+      const translations = {
+        'en': 0,
+        'ru': 1,
+        'de': 2,
+        'es': 3,
+        'fr': 4
+      };
+      
+      // Get language from browser
+      const browserLang = navigator.language || navigator.userLanguage;
+      const langCode = browserLang.split('-')[0].toLowerCase();
+      
+      // Get language from URL parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlLang = urlParams.get('lang');
+      
+      // Get language from localStorage (if user previously selected)
+      const savedLang = localStorage.getItem('app_lang');
+      
+      // Priority: URL param > Saved preference > Browser language > Default (en)
+      const selectedLang = urlLang || savedLang || (translations[langCode] !== undefined ? langCode : 'en');
+      
+      // Show appropriate language container
+      const containers = document.querySelectorAll('.container');
+      containers.forEach(container => {
+        if (container.getAttribute('data-lang') === selectedLang) {
+          container.classList.remove('hidden');
+        } else {
+          container.classList.add('hidden');
+        }
+      });
+      
+      // Save language preference
+      if (selectedLang && !urlLang) {
+        localStorage.setItem('app_lang', selectedLang);
+      }
+      
+      // Update HTML lang attribute
+      document.documentElement.lang = selectedLang;
+    })();
+    
+    // Try to close the window/tab if opened from mobile app
+    // This works if the page was opened in a new window/tab
+    if (window.opener) {
+      window.close();
+    }
+    
+    // For mobile browsers, try to redirect to app or hide the page
+    // Universal Links should have already opened the app, so this is just a fallback
+    setTimeout(function() {
+      // Try to redirect to main page
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = '/';
+      }
+    }, 2000);
+  </script>
+</body>
+</html>

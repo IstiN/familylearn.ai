@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a3580"/>
+      <stop offset="100%" stop-color="#6B4CD8"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd93d"/>
+      <stop offset="100%" stop-color="#ff6b6b"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="200" fill="url(#bg)"/>
+  <g transform="translate(312,170) scale(4)">
+    <circle cx="50" cy="50" r="40" fill="none" stroke="#dbe4ff"
+      stroke-width="2" stroke-dasharray="4 4" opacity="0.45"/>
+    <circle cx="50" cy="50" r="24" fill="none" stroke="#ffc800"
+      stroke-width="2" opacity="0.8"/>
+    <g transform="translate(10,50)">
+      <circle r="13" fill="white" stroke="#ffc800" stroke-width="2.5"/>
+      <path d="M-5,6 L-5,-6 L5,-6 M-5,0 L3,0 M-5,6 L5,6"
+        stroke="#ffc800" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+    </g>
+    <g transform="translate(80,26)">
+      <circle r="11" fill="white" stroke="#1cb0f6" stroke-width="2.5"/>
+      <circle r="3.5" fill="#ff6b6b"/>
+    </g>
+    <g transform="translate(68,86)">
+      <circle r="12" fill="white" stroke="#58cc02" stroke-width="2.5"/>
+      <rect x="-4.5" y="-5" width="9" height="10" rx="1.5" fill="#58cc02"/>
+    </g>
+    <g transform="translate(50,8)">
+      <circle r="10" fill="white" stroke="#8b5fd6" stroke-width="2.5"/>
+      <line x1="-3" y1="3" x2="3" y2="-3" stroke="#8b5fd6" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="3" y1="3" x2="-3" y2="-3" stroke="#8b5fd6" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+    <circle cx="50" cy="50" r="14" fill="url(#core)"/>
+    <circle cx="50" cy="50" r="5" fill="white"/>
+  </g>
+  <text x="512" y="745"
+    font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+    font-weight="800" font-size="118" fill="white"
+    text-anchor="middle" letter-spacing="-2">Family</text>
+</svg>
