@@ -1,0 +1,24 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified Learn.AI icon - filled version matching main app icon style -->
+  <defs>
+    <radialGradient id="learnAiGradient" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" style="stop-color:#ffd93d;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1"/>
+    </radialGradient>
+  </defs>
+  <!-- Outer circle with subtle fill -->
+  <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.1"/>
+  <!-- Middle circle -->
+  <circle cx="12" cy="12" r="7" fill="currentColor" opacity="0.15"/>
+  <!-- Central circle with gradient fill (main feature) -->
+  <circle cx="12" cy="12" r="4.5" fill="url(#learnAiGradient)"/>
+  <!-- Inner white circle -->
+  <circle cx="12" cy="12" r="2" fill="white"/>
+  <!-- Small red dot in center -->
+  <circle cx="12" cy="12" r="0.8" fill="#ff6b6b"/>
+  <!-- Letter L -->
+  <path d="M5 16 L5 20 L9 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- .ai text simplified -->
+  <circle cx="10.5" cy="20.5" r="0.5" fill="#8b5fd6"/>
+  <path d="M12 19.5 L12 21.5 M13.5 19.5 L13.5 21.5" stroke="#8b5fd6" stroke-width="1.2" stroke-linecap="round"/>
+</svg>
