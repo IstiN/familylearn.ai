@@ -1,0 +1,18 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified Learn.AI icon - outline version matching main app icon style -->
+  <!-- Outer circle -->
+  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <!-- Middle circle -->
+  <circle cx="12" cy="12" r="7" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <!-- Central circle -->
+  <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+  <!-- Inner white circle -->
+  <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1" fill="none"/>
+  <!-- Small red dot in center -->
+  <circle cx="12" cy="12" r="0.8" fill="currentColor"/>
+  <!-- Letter L as path -->
+  <path d="M5 16 L5 20 L9 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- .ai as simplified paths -->
+  <circle cx="10.5" cy="20.5" r="0.5" fill="currentColor"/>
+  <path d="M12 19.5 L12 21.5 M13.5 19.5 L13.5 21.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+</svg>
